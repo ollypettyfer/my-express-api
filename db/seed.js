@@ -1,3 +1,4 @@
+import Dog from "../models/dog.js";
 import { dogsSeedData } from "./dogsSeedData.js";
 import { disconntedb, truncatedb, connectdb } from "./helpers.js";
 
@@ -9,7 +10,7 @@ async function seed() {
     await truncatedb();
     console.log("database has been dropped");
 
-    const dogs = await Dogs.create(dogsSeedData);
+    const dogs = await Dog.create(dogsSeedData);
     console.log(`${dogs.length} added dogs to the database`);
     console.log("goodbye");
   } catch (err) {

@@ -1,7 +1,7 @@
-import { Mongoose } from "mongoose";
+import mongoose from "mongoose";
 import mongooseUniqueValidator from "mongoose-unique-validator";
 
-const dogSchema = new Mongoose.Schema({
+const dogSchema = new mongoose.Schema({
   breed: String,
   hairType: String,
   lifeSpan: Number,
@@ -10,6 +10,6 @@ const dogSchema = new Mongoose.Schema({
 
 dogSchema.plugin(mongooseUniqueValidator);
 
-const Dog = Mongoose.model("dog", dogSchema);
+const Dog = mongoose.model("Dog", dogSchema);
 
 export default Dog;

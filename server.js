@@ -1,5 +1,5 @@
 import express from "express";
-import { connectdb } from "../movies-api/db/helpers.js";
+import { connectdb } from "./db/helpers.js";
 import router from "./config/router.js";
 import { port } from "./config/enviroment.js";
 
