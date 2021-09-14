@@ -1,4 +1,3 @@
-import { response } from "express";
 import Dog from "../models/dog.js";
 
 export const getAllDogs = async (request, response, next) => {
