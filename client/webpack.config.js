@@ -19,13 +19,13 @@ module.exports = (webpackEnv) => {
     },
     module: {
       rules: [
-        { test: /\.js$/, use: "babel-loader", exclude: /node_module/ },
-        { test: /\.css$/, use: ["styles-loader", "css-loader"] },
+        { test: /\.js$/, use: "babel-loader", exclude: /node_modules/ },
+        { test: /\.css$/, use: ["style-loader", "css-loader"] },
         {
-          test: /\.s(a\c)ss$/,
+          test: /\.s(a|c)ss$/,
           use: ["style-loader", "css-loader", "sass-loader"],
         },
-        { test: /\.(png|}jpe?g|gif)$/i, use: "filer-loader" },
+        { test: /\.(png|jpe?g|gif)$/i, use: "file-loader" },
       ],
     },
     devServer: {
