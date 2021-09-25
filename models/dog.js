@@ -14,6 +14,7 @@ const dogSchema = new mongoose.Schema({
   hairType: String,
   lifeSpan: Number,
   cost: Number,
+  colour: [{ type: mongoose.Types.ObjectId, ref: "Colour" }],
   comments: [commentSchema],
 });
 
