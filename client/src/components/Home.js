@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getAllDogs } from "../api/dogs.js";
+import dogSrc from "../images/dogPic.jpeg";
 
 const Home = () => {
   const [dogs, setDogs] = useState([]);
@@ -11,6 +12,7 @@ const Home = () => {
   return (
     <>
       <h1> Hello DOGS</h1>
+      <img src={dogSrc} alt="a picture of a very good dog" />
       {
         <section className="title is-parent">
           {dogs.map((dog) => (
