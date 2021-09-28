@@ -29,12 +29,12 @@ module.exports = (webpackEnv) => {
       ],
     },
     devServer: {
-      publicPath: "/",
-      contentBase: path.resolve("src"),
+      //publicPath: "/",
+      //contentBase: path.resolve("src"),
       hot: true,
       open: true,
       port: 4001,
-      watchContentBase: true,
+      //npwatchContentBase: true,
       historyApiFallback: true,
       proxy: {
         "/api": {

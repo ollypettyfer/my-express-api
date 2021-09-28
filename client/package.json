@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -p --env.NODE_ENV=production",
-    "start:client": "webpack-dev-server --node=development --env.NODE_ENV=local"
+    "build": "webpack -p --env NODE_ENV=production",
+     "start:client": "webpack-dev-server --mode=development --env NODE_ENV=local"
   },
   "keywords": [
     "dogs"
